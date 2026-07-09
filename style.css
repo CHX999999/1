@@ -290,13 +290,12 @@ body::before {
     z-index: 2;
 }
 
-
 .card-top h2 {
     font-size: 1.3rem;
     font-weight: 900;
     letter-spacing: 1px;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(135deg, #0369A1 0%, #0ea5e9 100%);
+    background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -304,18 +303,26 @@ body::before {
 
 /* --- FORMATO PARA MODO LIGHT-MODE --- */
 
-body.light-mode .card-top h2 {
-     font-size: 1.3rem;
+body.light-mode
+ .card-top h2 {
+
     font-weight: 900;
     letter-spacing: 1px;
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(135deg, #0369A1 0%, #0ea5e9 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-
-
+    
+    /* Mantenemos la sombra, pero la ajustamos un poco para que destaque sobre el fondo claro */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+    
+    /* Degradado en tonos azules para el modo claro */
+    background: linear-gradient(135deg, #0369A1 0%, #0ea5e9 100%) ;
+    
+    /* Propiedades de máscara para aplicar el fondo al texto */
+    -webkit-background-clip: text ;
+    background-clip: text ;
+    
+    /* Hacemos que el color del texto sea transparente para ver el degradado */
+    -webkit-text-fill-color: transparent ;
 }
+
 .label-tag {
     font-size: 0.65rem;
     color: #38BDF8;
